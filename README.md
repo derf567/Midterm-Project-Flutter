@@ -37,5 +37,9 @@ Before proceeding, ensure that both Git and Flutter are installed on your system
 
 Open your terminal or command prompt and execute the following command to clone your project:
 
-```bash
-git clone https://github.com/derf567/Midterm-Project-Flutter.git
+```setup
+git clone https://github.com/derf567/Midterm-Project-Flutter.git   to clone this repository
+flutter pub get in the project root directory to install all the required dependencies.
+
+
+
