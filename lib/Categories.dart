@@ -3,14 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_1/Navigation.dart';
 
 class CategoriesPage extends StatelessWidget {
+  const CategoriesPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Categories'),
+        title: const Text('Categories'),
       ),
       body: ListView(
-        children: <Widget>[
+        children: const <Widget>[
           ListTile(
             title: Text('Food'),
           ),

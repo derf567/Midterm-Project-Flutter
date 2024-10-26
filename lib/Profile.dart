@@ -1,23 +1,40 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_1/Navigation.dart';
+import 'login.dart';
 
 class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Profile & Settings'),
-      ),
+      appBar: AppBar(title: const Text('Profile & Settings')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('User Profile'),
-            // Add more profile details and settings like theme, currency
+            const CircleAvatar(
+              radius: 50,
+              backgroundImage:
+                  AssetImage('assets/profile_picture.png'), // Placeholder image
+            ),
+            const SizedBox(height: 16),
+            const Text('User Profile', style: TextStyle(fontSize: 24)),
+            const SizedBox(height: 32),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginPage()),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.red,
+              ),
+              child: const Text('Logout'),
+            ),
           ],
         ),
       ),
-      bottomNavigationBar: BottomNav(),
     );
   }
 }

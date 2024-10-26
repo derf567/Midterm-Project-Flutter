@@ -5,6 +5,8 @@ import 'package:flutter_1/Transactionhistory.dart';
 import 'package:flutter_1/dashboard.dart';
 
 class BottomNav extends StatefulWidget {
+  const BottomNav({super.key});
+
   @override
   _BottomNavState createState() => _BottomNavState();
 }
